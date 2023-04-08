@@ -2,6 +2,16 @@
     @info
     equals в классе Object сравниваеи учатски в памяти.(поэтому его практически всегда нужно переопределять).
     hashcode аналогично.
+
+    Почему мы не можем сравнивать, объекты только с помощью метода equals? -
+    метод hashcode работает быстрее, когда мы проверяем объекты на равенство мы сначала вызываем метод hashcode,
+    и если метод hashcode прошел проверку, то объекты равны, а если не прошел (разные хэши), то вызывается метод equals
+    для дополнительной првоерки. (equals всегда выдает верный ответ).
+
+    Контракт hashcode equals:
+    1. Invoke hashcode method for 2 comparable objects -> if they have different hash -> objects not equals.
+    2. If hash's equals, invoke method equals()
+    3. Equals guaranteed right answer.
  */
 
 package HashCodeEquals;

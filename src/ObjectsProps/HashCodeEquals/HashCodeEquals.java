@@ -14,7 +14,7 @@
     3. Equals guaranteed right answer.
  */
 
-package HashCodeEquals;
+package ObjectsProps.HashCodeEquals;
 
 import java.util.*;
 

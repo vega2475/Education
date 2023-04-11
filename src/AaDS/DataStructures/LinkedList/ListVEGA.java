@@ -1,10 +1,10 @@
 package AaDS.DataStructures.LinkedList;
 
 public interface ListVEGA<T> {
-    void add(T item);
-    void remove(int index);
-    T get(int index);
-    long length();
-    String toString();
-    boolean isEmpty();
+    public void add(T item);
+    public void remove(int index);
+    public T get(int index);
+    public long length();
+    public String toString();
+    public boolean isEmpty();
 }

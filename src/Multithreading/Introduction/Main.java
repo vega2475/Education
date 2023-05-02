@@ -7,7 +7,7 @@
  *
  */
 
-package Multithreading;
+package Multithreading.Introduction;
 
 class Main {
     // 1st way for make thread - extend from Thread class

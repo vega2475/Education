@@ -22,7 +22,7 @@
     Не указывая объекты явно, мы синхронизируемся на объекте this.
  */
 
-package Multithreading.Synchronized1;
+package Multithreading.Synchronized.Part1;
 
 class Main {
     private int counter;

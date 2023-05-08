@@ -17,7 +17,7 @@ import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class Main {
+class Main {
     public static void main(String[] args) throws InterruptedException {
         //Эта очередь настроена на работу с множеством потоков
         BlockingQueue<Integer> blockingQueue = new ArrayBlockingQueue<>(10);//Интерфейс BlockingQueue класс который реализует ArrayBlockingQueue. Как с List и ArrayList. В конструктор размер очереди.

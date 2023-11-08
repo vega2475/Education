@@ -11,7 +11,6 @@ package AaDS.YandexCourse4.lection1;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import AaDS.YandexCourse4.util.QuickSort;
 
 /**
  * В данном коде представлен алгоритм разбиения через 3 указателя E - equal (указывает на первый элемент последовательности чисел равных опорному),

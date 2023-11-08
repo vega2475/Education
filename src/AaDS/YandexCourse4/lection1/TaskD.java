@@ -1,8 +1,10 @@
 package AaDS.YandexCourse4.lection1;
-// TODO - недоработано!!!
+
+import AaDS.YandexCourse4.lection1.util.MergeSort;
+
 import java.util.Scanner;
 
-class TaskB {
+public class TaskD {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -11,7 +13,7 @@ class TaskB {
             arr[i] = scanner.nextInt();
         }
 
-        //QuickSort.sort(arr, 0, arr.length - 1);
+        MergeSort.mergeSort(arr);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < arr.length; i++){
             stringBuilder.append(arr[i]);

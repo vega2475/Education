@@ -10,12 +10,14 @@ package AaDS.Algorithmes.Sort;
 import java.util.Arrays;
 
 public class QuickSort {
+    static int c = 0;
     public static void quickSort(int[] arr){
         quickSort(arr, 0, arr.length - 1);
     }
     private static void quickSort(int[] arr, int from, int to){
         if(from < to){
             int pivot = partition(arr, from, to); // Опорный элемент (возвращает индекс элемента по которому происходит разделение)
+            System.out.println(pivot);
             quickSort(arr, from, pivot - 1); //Сортировка левого подмассива
             quickSort(arr, pivot, to); //Сортировка правого подмассива
         }
@@ -27,21 +29,26 @@ public class QuickSort {
 
         int pivot = arr[from];
         while(leftIndex <= rightIndex){
+            c++;
             //Движемся от начала массива к концу пока не найдем в левой части массива, какой-то элемент который больше опорного.
             while (arr[leftIndex] < pivot){
+                c++;
                 leftIndex++;
             }
             //Движемся от конца массива к началу пока не найдем в правой части массива, какой-то элемент который меньше опорного.
             while (arr[rightIndex] > pivot){
+                c++;
                 rightIndex--;
             }
             //После того как найдена пара элементов которые в левой части и больше опорного, а в правой части и меньше опорного, они синхронно меняются местами
             if(leftIndex <= rightIndex){
+                c++;
                 swap(arr, leftIndex, rightIndex);
                 leftIndex++;
                 rightIndex--;
             }
         }
+        //System.out.println(c);
         return leftIndex;
     }
     private static void swap(int[] arr, int index1, int index2){
@@ -57,5 +64,6 @@ class Test{
         System.out.println(Arrays.toString(array));
         QuickSort.quickSort(array);
         System.out.println(Arrays.toString(array));
+        System.out.println();
     }
 }
